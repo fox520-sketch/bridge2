@@ -9,7 +9,7 @@
 <body>
 <main>
   <h1>清除舊版快取</h1>
-  <p class="muted">若頁腳仍顯示 bridge-v1.0.24.10，請按下方按鈕清除舊 Service Worker 與 Cache，完成後會自動回到最新版。</p>
+  <p class="muted">若頁腳仍顯示 bridge-v1.0.24.11，請按下方按鈕清除舊 Service Worker 與 Cache，完成後會自動回到最新版。</p>
   <button id="resetBtn">清除快取並重新開啟</button>
   <p id="status" class="muted"></p>
 </main>
@@ -28,7 +28,7 @@ async function reset(){
     }
     status.textContent='完成，正在重新開啟最新版...';
     const base=location.pathname.replace(/cache-reset\.html$/,'');
-    setTimeout(()=>location.replace(base+'?fresh=1.0.24.9-'+Date.now()),500);
+    setTimeout(()=>location.replace(base+'?fresh=1.0.24.11-'+Date.now()),500);
   }catch(err){
     status.textContent='清除失敗：'+(err&&err.message?err.message:String(err));
   }

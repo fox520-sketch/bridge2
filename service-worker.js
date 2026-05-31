@@ -1,10 +1,10 @@
-const CACHE_NAME = "contract-bridge-v1-0-24-10-auction-table-badges";
+const CACHE_NAME = "contract-bridge-v1-0-24-11-theme-modes";
 const ASSETS = [
   "./",
-  "./index.html?v=1.0.24.10",
-  "./style.css?v=1.0.24.10",
-  "./app.js?v=1.0.24.10",
-  "./manifest.webmanifest?v=1.0.24.10",
+  "./index.html?v=1.0.24.11",
+  "./style.css?v=1.0.24.11",
+  "./app.js?v=1.0.24.11",
+  "./manifest.webmanifest?v=1.0.24.11",
   "./icons/icon-192.png",
   "./icons/icon-512.png"
 ];
@@ -34,7 +34,7 @@ self.addEventListener("fetch", (event) => {
         }
         return response;
       })
-      .catch(() => caches.match(request).then((cached) => cached || caches.match("./index.html?v=1.0.24.10") || caches.match("./index.html")))
+      .catch(() => caches.match(request).then((cached) => cached || caches.match("./index.html?v=1.0.24.11") || caches.match("./index.html")))
   );
 });
 

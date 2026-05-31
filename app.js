@@ -1,4 +1,4 @@
-const BUILD = "bridge-v1.0.24.10-auction-table-badges";
+const BUILD = "bridge-v1.0.24.11-theme-modes";
 const ROOM_SCHEMA_VERSION = 66;
 const SEATS = [
   { id: 0, key: "N", name: "北", team: "NS" },
@@ -310,7 +310,7 @@ function ensureClientId() {
 
 function applyTheme(theme, persist = false) {
   if (persist) localStorage.setItem(STORAGE.theme, theme);
-  const actual = theme === "auto" ? (matchMedia("(prefers-color-scheme: dark)").matches ? "twilight" : "ocean") : theme;
+  const actual = theme === "auto" ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "ocean") : theme;
   document.documentElement.dataset.theme = actual;
   const picker = $("themeSelect");
   if (picker) picker.value = theme;
@@ -4305,7 +4305,7 @@ function registerServiceWorker() {
     location.reload();
   });
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./service-worker.js?v=1.0.24.10", { updateViaCache: "none" }).then((registration) => {
+    navigator.serviceWorker.register("./service-worker.js?v=1.0.24.11", { updateViaCache: "none" }).then((registration) => {
       registration.update().catch(() => {});
       if (registration.waiting && navigator.serviceWorker.controller) {
         registration.waiting.postMessage({ type: "SKIP_WAITING" });

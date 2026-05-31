@@ -8,12 +8,12 @@
   <meta http-equiv="Expires" content="0" />
   <title>合約橋牌｜標準夢家・閉手變體・Firebase 多人對戰</title>
   <meta name="description" content="合約橋牌網頁遊戲，支援標準夢家亮牌、閉手四人自出牌變體、單人離線、Firebase 開房間與 4 位真人對戰。" />
-  <meta name="theme-color" content="#087ea4" />
+  <meta name="theme-color" content="#000000" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="合約橋牌" />
-  <link rel="manifest" href="manifest.webmanifest?v=1.0.24.10" />
+  <link rel="manifest" href="manifest.webmanifest?v=1.0.24.11" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="style.css?v=1.0.24.10" />
+  <link rel="stylesheet" href="style.css?v=1.0.24.11" />
 </head>
 <body>
   <div id="app">
@@ -193,7 +193,9 @@
                   <option value="auto">自動（跟隨系統）</option>
                   <option value="ocean">海洋風</option>
                   <option value="eye-care">護眼風</option>
-                  <option value="e-ink">電子紙風</option>
+                  <option value="dark">深色模式（OLED 黑底）</option>
+                  <option value="e-ink">電子紙柔和風</option>
+                  <option value="mono">黑白模式（電子紙）</option>
                   <option value="forest">森林風</option>
                   <option value="grassland">草原風</option>
                   <option value="sakura">櫻花風</option>
@@ -578,6 +580,7 @@
         <p class="eyebrow">Release</p>
         <h2>本版更新</h2>
         <ul>
+          <li>v1.0.24.11：主題新增「深色模式（OLED 黑底）」與「黑白模式（電子紙）」，系統深色自動改用黑底。</li>
           <li>v1.0.24.10：叫牌階段把各家的叫牌顯示在玩家前方，並將目前最高叫品特別高亮，牌桌更直覺。</li>
             <li>v1.0.24.9：首頁簡化為「單人遊戲、多人遊戲、說明、其他設定」四大區塊，主要入口更清楚。</li>
           <li>v1.0.23：新增四人座位視角模擬、Firebase 部署檢查器、出牌 AI 第三版、正式大廳與新手教學第三章。</li>
@@ -736,6 +739,6 @@
     <footer id="versionFooter" class="version-footer"></footer>
     <div id="toast" class="toast hidden"></div>
   </div>
-  <script type="module" src="app.js?v=1.0.24.10"></script>
+  <script type="module" src="app.js?v=1.0.24.11"></script>
 </body>
 </html>
